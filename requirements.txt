@@ -1,0 +1,7 @@
+pettingzoo
+gymnasium
+numpy
+pygame
+pillow
+torch
+safetensors
