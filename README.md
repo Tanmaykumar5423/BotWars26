@@ -4,12 +4,16 @@
 
 Train a bot to play **Connect 4 Plus** and compete in the BotWars tournament!
 
+> **Full rules, scoring, and tournament format → [`rules.txt`](rules.txt)**
+
 ---
 
 ## Important Rules
 
 - `training.py` and `myBot` are **just samples** — feel free to use any architecture, algorithm, or approach you like.
 - Your submitted model must **run on CPU only** (no GPU/CUDA). Submissions that require a GPU will be disqualified.
+- Your bot must return an action within **5 seconds per move** — exceeding this forfeits the match.
+- Maximum submission folder size: **50 MB**.
 - At least **1 NITK student** must be on your team to be eligible for prizes.
 - Need an extra library? Ask in **Discord** before the deadline so we can add it to the tournament environment.
 - All updates and announcements will be posted on **Discord** — make sure you've joined.
@@ -25,7 +29,7 @@ Connect 4 Plus is classic Connect Four with a twist: a **neutral coin** is rando
 - **Players**: 2 (taking turns)
 - **Win**: Connect 4 of your pieces in a line (horizontal / vertical / diagonal)
 - **Draw**: Board full, no winner
-- **Illegal move**: Instant loss (`-1` reward)
+- **Illegal move**: Instant loss (see [`rules.txt`](rules.txt) for all outcomes)
 
 ## Observation & Action
 

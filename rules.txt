@@ -1,0 +1,70 @@
+================================================================================
+                              BOTWARS26 — RULES
+================================================================================
+
+────────────────────────────────────────────────────────────────────────────────
+1. SUBMISSION RULES
+────────────────────────────────────────────────────────────────────────────────
+
+- Each team submits a single folder containing:
+    • model.py          — must define a class with an act(observation) method.
+    • model.safetensors  — (optional) saved model weights in safetensors format.
+
+- Maximum total submission folder size: 50 MB.
+
+- Your bot must return a valid action within 5 seconds per move.
+  Exceeding this limit forfeits the match instantly.
+
+- Each match has a total time cap of 300 seconds (5 minutes).
+  If a match exceeds this, it is declared void for both teams.
+
+- Allowed libraries are listed in requirements.txt.
+  If you need an additional library, message in Discord for approval.
+
+- Submissions must not attempt to access the file system, network, or any
+  resources outside their own folder. Violations result in disqualification.
+
+────────────────────────────────────────────────────────────────────────────────
+2. POINTS & SCORING
+────────────────────────────────────────────────────────────────────────────────
+
+  Result                        Winner    Loser
+  ─────────────────────────────────────────────
+  Normal win                    3 pts     0 pts
+  Opponent timeout (per move)   3 pts     0 pts
+  Opponent crash / error        3 pts     0 pts
+  Opponent illegal move         3 pts     0 pts
+  Draw (board fills up)         1 pt      1 pt
+  Match timeout (time cap)      0 pts     0 pts  (both get a loss)
+  Match error                   0 pts     0 pts  (both get a loss)
+
+- There is NO negative marking. The minimum any team can receive is 0 points.
+
+- Teams are ranked by total points. Ties are broken by:
+    1. Submission size (smaller is better)
+    2. Inference time (faster is better)
+
+────────────────────────────────────────────────────────────────────────────────
+3. LEAGUE FORMAT
+────────────────────────────────────────────────────────────────────────────────
+
+Round-Robin within Brackets:
+
+- Every pair of teams plays 2 matches against each other — once as Player 1
+  (first move) and once as Player 2. This ensures fairness since going first
+  can be an advantage.
+
+- If the number of teams is small enough , all teams play in a single
+  group and the final standings determine the ranking directly.
+
+Brackets (for larger tournaments):
+
+- When the number of teams exceeds a manageable size, they are split into
+  brackets of roughly equal size.
+
+- Each bracket runs a full round-robin internally.
+
+- The top 3 teams from each bracket advance to the next stage, where they
+  play another round-robin to determine the final rankings.
+
+================================================================================
